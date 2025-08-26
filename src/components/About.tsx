@@ -18,9 +18,9 @@ export function About() {
             {/* Text content */}
             <div className="space-y-6">
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Ajudo profissionais de saúde a se posicionarem no digital com estratégias de conteúdo,
+                Ajudo profissionais a posicionarem no digital com estratégias de conteúdo,
                 design e performance. Minha missão é transformar perfis em referências, gerando
-                autoridade, engajamento e novos pacientes.
+                autoridade, engajamento e novos clientes.
               </p>
 
               {/* Feature cards */}
@@ -75,7 +75,7 @@ export function About() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-primary-foreground p-8">
-                    <div className="text-6xl font-bold mb-4">10+</div>
+                    <div className="text-6xl font-bold mb-4">+4</div>
                     <div className="text-xl">Anos de Experiência</div>
                     <div className="text-lg opacity-90 mt-2">em Marketing Digital</div>
                   </div>

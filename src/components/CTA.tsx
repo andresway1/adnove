@@ -62,13 +62,6 @@ export function CTA() {
               </Button>
             </div>
 
-            {/* Trust indicators */}
-            <div className="mt-8 pt-8 border-t border-border">
-              <p className="text-sm text-muted-foreground">
-                Junte-se a mais de <span className="font-semibold text-foreground">500 profissionais de saúde</span> que 
-                já transformaram sua presença digital
-              </p>
-            </div>
           </div>
         </div>
       </div>

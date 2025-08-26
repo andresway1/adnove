@@ -105,33 +105,6 @@ export function Solutions() {
             })}
           </div>
 
-          {/* Benefits */}
-          <div className="mt-16 grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-                100%
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Conteúdo personalizado para sua especialidade
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold bg-gradient-accent bg-clip-text text-transparent mb-2">
-                24/7
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Suporte contínuo via WhatsApp
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-                30 dias
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Garantia de satisfação total
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

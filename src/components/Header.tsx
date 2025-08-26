@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import logoAdnove from "@/assets/logo-adnove.png";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,9 +12,11 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <span className="text-xl font-heading font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Digital Health
-            </span>
+            <img 
+              src={logoAdnove} 
+              alt="AdNove" 
+              className="h-10 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
