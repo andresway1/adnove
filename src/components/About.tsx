@@ -1,7 +1,7 @@
 import { Target, Users, TrendingUp } from "lucide-react";
 import Image from "next/image";
 
-export function About() {
+export default function About() {
   return (
     <section id="sobre" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,11 +26,11 @@ export function About() {
               </p>
             </div>
 
-            {/* Image placeholder (substituído pelo Next/Image) */}
+            {/* Image placeholder (agora com Next/Image) */}
             <div className="relative">
               <div className="aspect-square bg-gradient-primary rounded-2xl shadow-xl overflow-hidden flex items-center justify-center">
                 <Image
-                  src="/experiencia.png"   // coloque o arquivo em /public/experiencia.png
+                  src="/experiencia.png"
                   alt="Experiência em Marketing Digital"
                   width={400}
                   height={400}
