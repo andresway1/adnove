@@ -15,7 +15,7 @@ export function Header() {
             <img 
               src={logoAdnove} 
               alt="AdNove"
-              className="h-12 w-auto md:h-14 lg:h-16 object-contain"
+              className="h-16 w-auto md:h-20 lg:h-24 object-contain"
             />
           </div>
 
