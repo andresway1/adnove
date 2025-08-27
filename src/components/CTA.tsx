@@ -51,7 +51,12 @@ export function CTA() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg" className="group">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="group"
+                onClick={() => window.open('https://api.whatsapp.com/send/?phone=5519995659229&text=Ol%C3%A1%21+Quero+uma+avalia%C3%A7%C3%A3o+grauita+do+meu+perfil&type=phone_number&app_absent=0', '_blank')}
+              >
                 <MessageCircle className="mr-2 h-4 w-4" />
                 Agendar via WhatsApp
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

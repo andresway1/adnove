@@ -61,7 +61,7 @@ export function PricingPlans() {
               Planos de Trabalho
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Escolha o plano ideal para transformar sua presença digital e atrair mais pacientes
+              Escolha o plano ideal para transformar sua presença digital e atrair mais clientes
             </p>
             <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full mt-4" />
           </div>
@@ -127,6 +127,14 @@ export function PricingPlans() {
                       variant={isHighlighted ? "hero" : plan.color === "accent" ? "accent" : "default"}
                       size="lg"
                       className="w-full"
+                      onClick={() => {
+                        const links: { [key: string]: string } = {
+                          "Plano Essencial": "https://api.whatsapp.com/send/?phone=5519995659229&text=Ol%C3%A1%21+Quero+o+plano+essencial&type=phone_number&app_absent=0",
+                          "Plano Profissional": "https://api.whatsapp.com/send/?phone=5519995659229&text=Ol%C3%A1%21+Quero+o+plano+profissional&type=phone_number&app_absent=0",
+                          "Plano Premium": "https://api.whatsapp.com/send/?phone=5519995659229&text=Ol%C3%A1%21+Quero+o+plano+premium&type=phone_number&app_absent=0"
+                        };
+                        window.open(links[plan.name], '_blank');
+                      }}
                     >
                       Escolher {plan.name.split(' ')[1]}
                     </Button>
