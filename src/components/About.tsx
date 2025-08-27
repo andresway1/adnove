@@ -1,4 +1,5 @@
 import { Target, Users, TrendingUp } from "lucide-react";
+import Image from "next/image";
 
 export function About() {
   return (
@@ -18,69 +19,26 @@ export function About() {
             {/* Text content */}
             <div className="space-y-6">
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Ajudo profissionais a posicionarem no digital com estratégias de conteúdo,
-                design e performance. Minha missão é transformar perfis em referências, gerando
-                autoridade, engajamento e novos clientes.
+                Ajudo profissionais a se posicionarem no digital com estratégias
+                de conteúdo, design e performance. Minha missão é transformar
+                perfis em referências, gerando autoridade, engajamento e novos
+                clientes.
               </p>
-
-              {/* Feature cards */}
-              <div className="space-y-4">
-                <div className="flex gap-4 p-4 bg-card rounded-lg shadow-card hover:shadow-card-hover transition-all">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-primary-soft rounded-lg flex items-center justify-center">
-                      <Target className="h-6 w-6 text-primary" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">Estratégia Personalizada</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Cada profissional tem necessidades únicas. Desenvolvo estratégias sob medida para seu nicho.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4 p-4 bg-card rounded-lg shadow-card hover:shadow-card-hover transition-all">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-accent-soft rounded-lg flex items-center justify-center">
-                      <Users className="h-6 w-6 text-accent" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">Foco em Resultados</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Não apenas seguidores, mas pacientes reais e engajamento qualificado.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4 p-4 bg-card rounded-lg shadow-card hover:shadow-card-hover transition-all">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-primary-soft rounded-lg flex items-center justify-center">
-                      <TrendingUp className="h-6 w-6 text-primary" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">Crescimento Sustentável</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Construa uma presença digital sólida e duradoura, não apenas viral.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
 
-            {/* Image placeholder */}
+            {/* Image placeholder (substituído pelo Next/Image) */}
             <div className="relative">
-              <div className="aspect-square bg-gradient-primary rounded-2xl shadow-xl overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-primary-foreground p-8">
-                    <div className="text-6xl font-bold mb-4">+4</div>
-                    <div className="text-xl">Anos de Experiência</div>
-                    <div className="text-lg opacity-90 mt-2">em Marketing Digital</div>
-                  </div>
-                </div>
+              <div className="aspect-square bg-gradient-primary rounded-2xl shadow-xl overflow-hidden flex items-center justify-center">
+                <Image
+                  src="/experiencia.png"   // coloque o arquivo em /public/experiencia.png
+                  alt="Experiência em Marketing Digital"
+                  width={400}
+                  height={400}
+                  className="h-auto w-auto max-h-64 object-contain"
+                  priority
+                />
               </div>
+
               {/* Decorative element */}
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/10 rounded-full filter blur-2xl" />
             </div>
