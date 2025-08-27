@@ -11,11 +11,11 @@ export function Header() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center flex-shrink-0">
             <img 
               src={logoAdnove} 
-              alt="AdNove" 
-              className="h-10 w-auto"
+              alt="AdNove"
+              className="h-12 w-auto md:h-14 lg:h-16 object-contain"
             />
           </div>
 
