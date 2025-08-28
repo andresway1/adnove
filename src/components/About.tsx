@@ -1,6 +1,5 @@
+import experiencia from "@/assets/experiencia.png";
 import { Target, Users, TrendingUp } from "lucide-react";
-import Image from "next/image";
-
 export default function About() {
   return (
     <section id="sobre" className="py-20 bg-gradient-subtle">
@@ -29,15 +28,14 @@ export default function About() {
             {/* Image placeholder (agora com Next/Image) */}
             <div className="relative">
               <div className="aspect-square bg-gradient-primary rounded-2xl shadow-xl overflow-hidden flex items-center justify-center">
-                <Image
-                  src="/experiencia.png"
-                  alt="Experiência em Marketing Digital"
-                  width={400}
-                  height={400}
-                  className="h-auto w-auto max-h-64 object-contain"
-                  priority
-                />
-              </div>
+  <img
+    src={experiencia}
+    alt="Experiência em Marketing Digital"
+    className="h-auto w-auto max-h-64 md:max-h-72 lg:max-h-80 object-contain"
+    loading="eager"
+    decoding="async"
+  />
+</div>
 
               {/* Decorative element */}
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/10 rounded-full filter blur-2xl" />
