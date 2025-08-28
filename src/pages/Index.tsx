@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { About } from "@/components/About";
+import About from "@/components/About";
 import { Challenges } from "@/components/Challenges";
 import { Solutions } from "@/components/Solutions";
 import { PricingPlans } from "@/components/PricingPlans";
