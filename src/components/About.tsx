@@ -7,11 +7,14 @@ export default function About() {
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
-              Sobre Mim
-            </h2>
-            <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full" />
-          </div>
+  <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-2">
+    Sobre Mim
+  </h2>
+  <h3 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-4">
+    André Oliveira
+  </h3>
+  <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full" />
+</div>
 
           {/* Content grid */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
