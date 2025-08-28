@@ -29,12 +29,12 @@ export default function About() {
             <div className="relative">
               <div className="aspect-square bg-gradient-primary rounded-2xl shadow-xl overflow-hidden flex items-center justify-center">
   <img
-    src={experiencia}
-    alt="Experiência em Marketing Digital"
-    className="h-auto w-auto max-h-64 md:max-h-72 lg:max-h-80 object-contain"
-    loading="eager"
-    decoding="async"
-  />
+  src={experiencia}
+  alt="Experiência em Marketing Digital"
+  className="w-full h-full object-cover"
+  loading="eager"
+  decoding="async"
+/>
 </div>
 
               {/* Decorative element */}
