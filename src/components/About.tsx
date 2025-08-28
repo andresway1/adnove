@@ -22,10 +22,10 @@ export default function About() {
                 André Oliveira
               </h3>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Ajudo profissionais a se posicionarem no digital com estratégias
-                de conteúdo, design e performance. Minha missão é transformar
-                perfis em referências, gerando autoridade, engajamento e novos
-                clientes.
+                Há mais de 3 anos ajudo profissionais a se posicionarem no
+                digital com estratégias de conteúdo, design e performance. Minha
+                missão é transformar perfis em referências, gerando autoridade,
+                engajamento e novos clientes.
               </p>
             </div>
 
