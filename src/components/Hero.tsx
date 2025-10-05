@@ -17,7 +17,7 @@ export function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-soft rounded-full mb-6 animate-fade-in">
             <Sparkles className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium text-primary">
-              Especialista em Marketing Digital para Saúde
+              Especialista em Marketing Digital
             </span>
           </div>
 
@@ -31,8 +31,8 @@ export function Hero() {
 
           {/* Subheading */}
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in-up delay-100">
-            Ajudo profissionais de saúde a se posicionarem no digital com estratégias de conteúdo, 
-            design e performance. Gere autoridade, engajamento e novos pacientes.
+            Ajudo profissionais liberais a se posicionarem no digital com estratégias de conteúdo, 
+            design e performance. Gere autoridade, engajamento e novos clientes.
           </p>
 
           {/* CTA Buttons */}
