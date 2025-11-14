@@ -31,7 +31,7 @@ export default function About() {
 
             {/* Image placeholder */}
             <div className="relative">
-              <div className="aspect-square **h-[450px]** bg-gradient-primary rounded-2xl shadow-xl overflow-hidden flex items-center justify-center">
+              <div className="aspect-square **h-[400px]** bg-gradient-primary rounded-2xl shadow-xl overflow-hidden flex items-center justify-center">
                 <img
                   src={experiencia}
                   alt="Experiência em Marketing Digital"
