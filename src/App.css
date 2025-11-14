@@ -1,5 +1,5 @@
 #root {
-  max-width: 1000px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -39,4 +39,21 @@
 
 .read-the-docs {
   color: #888;
+}
+/* Estilo para a Caixa/Contêiner da Imagem */
+.perfil-box {
+    /* Define uma altura fixa para a caixa preta. Ajuste este valor! */
+    height: 450px; 
+    /* Isso garante que a imagem não saia dos limites definidos acima */
+    overflow: hidden; 
+}
+
+/* Estilo para a Imagem DENTRO da Caixa/Contêiner */
+.perfil-box img {
+    /* Faz a imagem ocupar 100% da largura da caixa */
+    width: 100%;
+    /* Faz a imagem ocupar 100% da altura da caixa */
+    height: 100%;
+    /* A chave: Faz a imagem preencher o espaço, cortando o excesso (mantém a proporção) */
+    object-fit: cover;
 }
