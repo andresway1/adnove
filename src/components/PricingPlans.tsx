@@ -5,7 +5,7 @@ const plans = [
   {
     name: "Plano Essencial",
     subtitle: "Autoridade Digital",
-    price: "899",
+    price: "Sob Consulta",
     icon: Star,
     color: "primary",
     features: [
@@ -19,7 +19,7 @@ const plans = [
   {
     name: "Plano Profissional",
     subtitle: "Crescimento & Engajamento",
-    price: "1.000",
+    price: "Sob Consulta",
     icon: TrendingUp,
     color: "accent",
     features: [
@@ -36,7 +36,7 @@ const plans = [
   {
     name: "Plano Premium",
     subtitle: "Autoridade + Conversão",
-    price: "1.500",
+    price: "Sob Consulta",
     icon: Crown,
     color: "primary",
     features: [
