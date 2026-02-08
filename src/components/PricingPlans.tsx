@@ -106,9 +106,7 @@ export function PricingPlans() {
                     {/* Price */}
                     <div className="text-center mb-6">
                       <div className="flex items-baseline justify-center">
-                        <span className="text-lg text-muted-foreground">R$</span>
                         <span className="text-4xl font-bold text-foreground mx-1">{plan.price}</span>
-                        <span className="text-muted-foreground">/mês</span>
                       </div>
                     </div>
 
