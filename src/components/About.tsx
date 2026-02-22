@@ -22,10 +22,10 @@ export default function About() {
                 André Oliveira
               </h3>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Há mais de 3 anos ajudo profissionais a se posicionarem no
-                digital com estratégias de conteúdo, design e performance. Minha
-                missão é transformar perfis em referências, gerando autoridade,
-                engajamento e novos clientes.
+                Estrategista de Operações e Performance com mais de 4 anos de atuação direta na construção de presença digital para profissionais de alto nível. Minha especialidade é transformar o conhecimento técnico de especialistas em ativos digitais de alta conversão. Na Adnove, sou o responsável por garantir que cada estratégia de design e tráfego não seja apenas visualmente impecável, mas operacionalmente lucrativa — com foco total em agilidade de implementação e entrega acima da média.   
+              
+
+
               </p>
             </div>
 
