@@ -37,8 +37,8 @@ export default function About() {
                   alt="Experiência em Marketing Digital"
                   className="w-full h-full object-cover"
                   loading="eager"
-                  decoding="async"
-                />
+                  decoding="async" />
+
               </div>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/10 rounded-full filter blur-2xl" />
             </div>
@@ -63,18 +63,18 @@ export default function About() {
             <div className="relative">
               <div className="aspect-square h-[400px] bg-gradient-primary rounded-2xl shadow-xl overflow-hidden flex items-center justify-center">
                 <img
-                  src={experiencia}
+
                   alt="Experiência em Marketing Digital"
                   className="w-full h-full object-cover"
                   loading="eager"
-                  decoding="async"
-                />
+                  decoding="async" src="/lovable-uploads/bbbbd0a3-44a0-46b7-bbb1-179349567f49.png" />
+
               </div>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-accent/10 rounded-full filter blur-2xl" />
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
