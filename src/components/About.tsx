@@ -52,10 +52,10 @@ export default function About() {
                 André Oliveira
               </h3>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Há mais de 3 anos ajudo profissionais a se posicionarem no
-                digital com estratégias de conteúdo, design e performance. Minha
-                missão é transformar perfis em referências, gerando autoridade,
-                engajamento e novos clientes.
+                Estrategista Comercial com sólido histórico em setores de alta complexidade e rigor técnico (Farmacêutico e Logístico). Especialista em transformar processos burocráticos em fluxos de alta performance, Fernando traz para a Adnove a precisão do setor de saúde aplicada ao marketing digital. Com vasta experiência no relacionamento com profissionais liberais, clínicas e hospitais, sua atuação é pautada na confiança, na entrega ágil e na construção de parcerias de longo prazo que visam a escala sustentável de negócios.
+              
+
+
               </p>
             </div>
 
