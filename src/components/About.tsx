@@ -8,8 +8,8 @@ export default function About() {
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
-              Sobre Mim
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">Sobre Nós
+
             </h2>
             <div className="w-20 h-1 bg-gradient-primary mx-auto rounded-full" />
           </div>
