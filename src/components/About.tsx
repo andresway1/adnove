@@ -48,8 +48,8 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-12 items-center mt-16">
             {/* Text content */}
             <div className="space-y-6">
-              <h3 className="text-3xl sm:text-4xl font-heading font-bold text-foreground">
-                André Oliveira
+              <h3 className="text-3xl sm:text-4xl font-heading font-bold text-foreground">Fernando Silvestre
+
               </h3>
               <p className="text-lg text-foreground/80 leading-relaxed">
                 Estrategista Comercial com sólido histórico em setores de alta complexidade e rigor técnico (Farmacêutico e Logístico). Especialista em transformar processos burocráticos em fluxos de alta performance, Fernando traz para a Adnove a precisão do setor de saúde aplicada ao marketing digital. Com vasta experiência no relacionamento com profissionais liberais, clínicas e hospitais, sua atuação é pautada na confiança, na entrega ágil e na construção de parcerias de longo prazo que visam a escala sustentável de negócios.
