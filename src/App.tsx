@@ -257,6 +257,51 @@ export default function App() {
         </div>
       </section>
 
+      {/* Sobre Nós */}
+      <section id="sobre" className="py-24 bg-gray-50 text-gray-900">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-navy-dark">Quem está à frente da sua estratégia</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            {/* Sócio 1 */}
+            <motion.div 
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
+              className="flex flex-col items-center"
+            >
+              <div className="w-48 h-48 mb-8 rounded-full bg-gray-200 overflow-hidden shadow-md flex-shrink-0">
+                {/* Profile Image */}
+                <img src="https://i.postimg.cc/8z4Gc3hH/experiencia.png" alt="André Oliveira" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" referrerPolicy="no-referrer" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-center">
+                <span className="text-blue-600">André Oliveira</span> <span className="text-gray-500 font-medium text-xl block mt-1 md:inline md:mt-0">- Gestor de Operações</span>
+              </h3>
+              <p className="text-gray-700 text-center leading-relaxed max-w-md">
+                Minha especialidade é transformar o conhecimento técnico de especialistas em ativos digitais de alta conversão. Na Adnove, sou o responsável por garantir que cada estratégia de design e tráfego não seja apenas visualmente impecável, mas operacionalmente lucrativa — com foco total em agilidade de implementação e entrega acima da média.
+              </p>
+            </motion.div>
+
+            {/* Sócio 2 */}
+            <motion.div 
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
+              className="flex flex-col items-center"
+            >
+              <div className="w-48 h-48 mb-8 rounded-full bg-gray-200 overflow-hidden shadow-md flex-shrink-0">
+                {/* Profile Image */}
+                <img src="https://i.postimg.cc/htyYHqLs/Fernando-1024x1024px.png" alt="Fernando Silvestre" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" referrerPolicy="no-referrer" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-center">
+                <span className="text-blue-600">Fernando Silvestre</span> <span className="text-gray-500 font-medium text-xl block mt-1 md:inline md:mt-0">- Diretor Comercial</span>
+              </h3>
+              <p className="text-gray-700 text-center leading-relaxed max-w-md">
+                Estrategista Comercial com sólido histórico em setores de alta complexidade e rigor técnico (Farmacêutico e Logístico). Especialista em transformar processos burocráticos em fluxos de alta performance.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section id="contato" className="py-24 bg-navy-dark">
         <div className="container mx-auto px-6 max-w-4xl text-center">
