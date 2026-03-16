@@ -29,7 +29,7 @@ export default function App() {
               <img 
                 src="https://i.postimg.cc/m2MK5k8F/Logo-para-site.png" 
                 alt="AdNove Consultoria de Marketing Digital" 
-                className="h-10 w-auto"
+                className="h-[58px] w-auto"
                 referrerPolicy="no-referrer"
               />
             </a>
