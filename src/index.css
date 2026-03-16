@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-navy-dark: #050a18;
+  --color-navy-medium: #0a1428;
+  --color-electric-cyan: #00f2ff;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Glassmorphism effect for cards and navigation */
+.glass-card {
+  background: rgba(10, 20, 40, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-nav {
+  background: rgba(5, 10, 24, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at top right, rgba(0, 242, 255, 0.15), transparent 40%),
+              radial-gradient(circle at bottom left, rgba(10, 20, 40, 1), transparent 50%);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+}
+
+.tech-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.62 0l.83.82-3.05 3.05-.83-.82 3.05-3.05zM10.609 0l.82.82-3.05 3.05-.82-.82 3.05-3.05zM23.29 0l.82.82-3.05 3.05-.82-.82 3.05-3.05zM35.97 0l.82.82-3.05 3.05-.82-.82 3.05-3.05zM48.65 0l.82.82-3.05 3.05-.82-.82 3.05-3.05zM0 10.61l.82-.82 3.05 3.05-.82.82-3.05-3.05zm0 12.68l.82-.82 3.05 3.05-.82.82-3.05-3.05zm0 12.68l.82-.82 3.05 3.05-.82.82-3.05-3.05zm0 12.68l.82-.82 3.05 3.05-.82.82-3.05-3.05z' fill='%2300f2ff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+html {
+  scroll-behavior: smooth;
+}
