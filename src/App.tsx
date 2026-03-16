@@ -278,7 +278,7 @@ export default function App() {
                 <span className="text-blue-600">André Oliveira</span> <span className="text-gray-500 font-medium text-xl block mt-1 md:inline md:mt-0">- Gestor de Operações</span>
               </h3>
               <p className="text-gray-700 text-center leading-relaxed max-w-md">
-                Minha especialidade é transformar o conhecimento técnico de especialistas em ativos digitais de alta conversão. Na Adnove, sou o responsável por garantir que cada estratégia de design e tráfego não seja apenas visualmente impecável, mas operacionalmente lucrativa — com foco total em agilidade de implementação e entrega acima da média.
+                Minha especialidade é transformar o conhecimento técnico de especialistas em ativos digitais de alta conversão. Na Adnove, sou o responsável por garantir que cada estratégia de design e tráfego não seja apenas visualmente impecável, mas operacionalmente lucrativa.
               </p>
             </motion.div>
 
