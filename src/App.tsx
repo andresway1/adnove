@@ -21,33 +21,29 @@ export default function App() {
   return (
     <div className="bg-navy-dark text-white font-sans selection:bg-electric-cyan selection:text-navy-dark min-h-screen">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-white shadow-sm">
+      <nav className="fixed top-0 w-full z-50 glass-nav">
         <div className="mx-auto px-6 py-4 flex justify-between items-center max-w-7xl">
           <div className="flex items-center">
             {/* Logo */}
-            <a href="#" className="flex items-center transition-transform hover:scale-105">
-              <img 
-                src="https://i.postimg.cc/m2MK5k8F/Logo-para-site.png" 
-                alt="AdNove Consultoria de Marketing Digital" 
-                className="h-[58px] w-auto"
-                referrerPolicy="no-referrer"
-              />
-            </a>
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 bg-white rounded-md flex items-center justify-center font-bold text-black text-xs">A</div>
+              <span className="text-xl font-extrabold tracking-tight uppercase italic text-white">AdNove</span>
+            </div>
           </div>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex gap-8 text-sm font-medium text-gray-800">
-            <a href="#servicos" className="hover:text-blue-600 transition-colors">Serviços</a>
-            <a href="#tecnologia" className="hover:text-blue-600 transition-colors">Tecnologia</a>
-            <a href="#resultados" className="hover:text-blue-600 transition-colors">Resultados</a>
+          <div className="hidden md:flex gap-8 text-sm font-medium text-gray-300">
+            <a href="#servicos" className="hover:text-electric-cyan transition-colors">Serviços</a>
+            <a href="#tecnologia" className="hover:text-electric-cyan transition-colors">Tecnologia</a>
+            <a href="#resultados" className="hover:text-electric-cyan transition-colors">Resultados</a>
           </div>
           
-          <a href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition-all duration-300">
+          <a href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex bg-white text-navy-dark px-5 py-2.5 rounded-full text-sm font-bold hover:bg-electric-cyan transition-all duration-300">
             Diagnóstico Gratuito
           </a>
 
           {/* Mobile Menu Toggle */}
-          <button className="md:hidden text-gray-800 hover:text-blue-600 transition-colors" onClick={toggleMobileMenu}>
+          <button className="md:hidden text-white hover:text-electric-cyan transition-colors" onClick={toggleMobileMenu}>
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -58,13 +54,13 @@ export default function App() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-b border-gray-100 shadow-lg"
+            className="md:hidden bg-navy-medium border-b border-white/10"
           >
-            <div className="flex flex-col px-6 py-4 gap-4 text-sm font-medium text-gray-800">
-              <a href="#servicos" onClick={closeMobileMenu} className="hover:text-blue-600 transition-colors py-2">Serviços</a>
-              <a href="#tecnologia" onClick={closeMobileMenu} className="hover:text-blue-600 transition-colors py-2">Tecnologia</a>
-              <a href="#resultados" onClick={closeMobileMenu} className="hover:text-blue-600 transition-colors py-2">Resultados</a>
-              <a href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu} className="bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition-all duration-300 text-center mt-2">
+            <div className="flex flex-col px-6 py-4 gap-4 text-sm font-medium text-gray-300">
+              <a href="#servicos" onClick={closeMobileMenu} className="hover:text-electric-cyan transition-colors py-2">Serviços</a>
+              <a href="#tecnologia" onClick={closeMobileMenu} className="hover:text-electric-cyan transition-colors py-2">Tecnologia</a>
+              <a href="#resultados" onClick={closeMobileMenu} className="hover:text-electric-cyan transition-colors py-2">Resultados</a>
+              <a href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu} className="bg-white text-navy-dark px-5 py-2.5 rounded-full text-sm font-bold hover:bg-electric-cyan transition-all duration-300 text-center mt-2">
                 Diagnóstico Gratuito
               </a>
             </div>
@@ -89,7 +85,7 @@ export default function App() {
             </motion.span>
             <motion.h1 
               variants={fadeInUp} initial="hidden" animate="visible" transition={{ delay: 0.1, duration: 0.8 }}
-              className="text-4xl md:text-5xl font-extrabold leading-tight mb-6"
+              className="text-5xl md:text-7xl font-extrabold leading-tight mb-6"
             >
               Não somos apenas uma agência. Somos a camada de <span className="text-electric-cyan">Inteligência</span> e Performance que escala o seu lucro.
             </motion.h1>
@@ -224,26 +220,15 @@ export default function App() {
       {/* Social Proof */}
       <section id="resultados" className="py-24 bg-navy-dark overflow-hidden">
         <div className="container mx-auto px-6 max-w-7xl">
-          <div className="text-center mb-16">
-            <p className="text-gray-400 font-bold tracking-widest uppercase mb-4">Parceiros que escalam conosco</p>
-            <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-              <span className="text-2xl font-bold">TECHCORP</span>
-              <span className="text-2xl font-bold">FLOWS</span>
-              <span className="text-2xl font-bold">NEXUS</span>
-              <span className="text-2xl font-bold">ULTRA</span>
-              <span className="text-2xl font-bold">GLOBO-D</span>
-            </div>
-          </div>
-          
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold">O que dizem nossos parceiros</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { quote: "Com o trabalho de marketing da Adnove já consegui fechar alguns novos projetos.", name: "Valeria Paes", role: "Valeria Paes Arquitetura" },
-              { quote: "Meu posicionamento no digital era muito ruim. Agora já estou recebendo vários contatos por dia.", name: "Adriana Potye", role: "Psicóloga Clínica", border: true },
-              { quote: "O segredo do nosso sucesso foi o ajuste na VSL. A agência conseguiu criar uma copy extremamente persuasiva e agressiva e com isso aumentamos em 70% nosso faturamento.", name: "Lucas Mendes", role: "Infoprodutor Digital" }
+              { quote: "A AdNove triplicou nossa taxa de conversão em 4 meses através da implementação do CRM e otimização de campanhas.", name: "Ricardo Mendes", role: "CEO, TechFlow" },
+              { quote: "O agente de IA no WhatsApp é um divisor de águas. Atendemos fora do horário comercial com a mesma qualidade de um humano.", name: "Fernanda Lima", role: "Marketing Head, Solaris", border: true },
+              { quote: "Mais que uma agência, eles são parceiros de negócio. O nível técnico é incomparável com o que vemos no mercado hoje.", name: "André Silva", role: "Fundador, Nexus App" }
             ].map((testimonial, idx) => (
               <motion.div 
                 key={idx}
@@ -291,11 +276,15 @@ export default function App() {
       {/* Footer */}
       <footer className="py-12 border-t border-white/5 bg-navy-dark text-gray-500">
         <div className="container mx-auto px-6 max-w-7xl flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="flex items-center gap-2 grayscale brightness-200 opacity-50">
+            <div className="w-6 h-6 bg-white rounded-md flex items-center justify-center font-bold text-black text-[10px]">A</div>
+            <span className="text-sm font-extrabold tracking-tight uppercase italic text-white">AdNove</span>
+          </div>
           <div className="flex gap-8 text-sm">
             <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
             <a href="#" className="hover:text-white transition-colors">Privacidade</a>
           </div>
-          <p className="text-sm text-center md:text-left">© 2026 AdNove Consultoria em Marketing. Todos os direitos reservados.</p>
+          <p className="text-sm text-center md:text-left">© 2026 AdNove Intelligence. Todos os direitos reservados.</p>
         </div>
       </footer>
     </div>
