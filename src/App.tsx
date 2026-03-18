@@ -230,9 +230,9 @@ export default function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { quote: "Com o trabalho de marketing da Adnove já consegui fechar alguns novos projetos.", name: "Valeria Paes", role: "Valeria Paes Arquitetura" },
-              { quote: "Meu posicionamento no digital era muito ruim. Agora já estou recebendo vários contatos por dia.", name: "Adriana Potye", role: "Psicóloga Clínica", border: true },
-              { quote: "O segredo do nosso sucesso foi o ajuste na VSL. A agência conseguiu criar uma copy extremamente persuasiva e agressiva e com isso aumentamos em 70% nosso faturamento.", name: "Lucas Mendes", role: "Infoprodutor Digital" }
+              { quote: "Com o trabalho de marketing da Adnove já consegui fechar alguns novos projetos.", name: "Valeria Paes", role: "Valeria Paes Arquitetura", image: "https://i.postimg.cc/T2WBdGq5/06.png" },
+              { quote: "Meu posicionamento no digital era muito ruim. Agora já estou recebendo vários contatos por dia.", name: "Adriana Potye", role: "Psicóloga Clínica", border: true, image: "https://i.postimg.cc/43mBWbW7/03A.png" },
+              { quote: "O segredo do nosso sucesso foi o ajuste na VSL. A agência conseguiu criar uma copy extremamente persuasiva e agressiva e com isso aumentamos em 70% nosso faturamento.", name: "Lucas Mendes", role: "Infoprodutor Digital", image: "https://i.postimg.cc/PqSnw4P2/Lucas-Mendes.jpg" }
             ].map((testimonial, idx) => (
               <motion.div 
                 key={idx}
@@ -245,7 +245,7 @@ export default function App() {
                 </div>
                 <p className="text-gray-300 italic mb-6">"{testimonial.quote}"</p>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-gray-600 rounded-full"></div>
+                  <img src={testimonial.image} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover" referrerPolicy="no-referrer" />
                   <div>
                     <p className="font-bold text-sm">{testimonial.name}</p>
                     <p className="text-xs text-gray-500">{testimonial.role}</p>
