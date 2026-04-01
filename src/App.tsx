@@ -29,7 +29,7 @@ export default function App() {
               <img 
                 src="https://i.postimg.cc/m2MK5k8F/Logo-para-site.png" 
                 alt="AdNove Consultoria de Marketing Digital" 
-                className="h-[58px] w-auto"
+                className="h-10 md:h-[58px] w-auto"
                 referrerPolicy="no-referrer"
               />
             </a>
@@ -73,7 +73,7 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen flex items-center pt-20 overflow-hidden hero-gradient tech-pattern">
+      <section id="hero" className="relative min-h-screen flex items-center pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden hero-gradient tech-pattern">
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-electric-cyan rounded-full filter blur-[120px] animate-pulse"></div>
           <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-blue-600 rounded-full filter blur-[100px]"></div>
@@ -103,10 +103,10 @@ export default function App() {
               variants={fadeInUp} initial="hidden" animate="visible" transition={{ delay: 0.3, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <a href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-electric-cyan text-navy-dark px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform glow-cyan">
+              <a href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-electric-cyan text-navy-dark px-6 py-4 md:px-8 rounded-lg font-bold text-base md:text-lg hover:scale-105 transition-transform glow-cyan text-center">
                 Agendar Consultoria Estratégica
               </a>
-              <a href="#servicos" className="inline-flex items-center justify-center border border-white/20 bg-white/5 hover:bg-white/10 px-8 py-4 rounded-lg font-semibold text-lg transition-all">
+              <a href="#servicos" className="inline-flex items-center justify-center border border-white/20 bg-white/5 hover:bg-white/10 px-6 py-4 md:px-8 rounded-lg font-semibold text-base md:text-lg transition-all text-center">
                 Conhecer Soluções
               </a>
             </motion.div>
@@ -154,7 +154,7 @@ export default function App() {
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
             className="lg:w-1/2"
           >
-            <h2 className="text-4xl font-extrabold mb-6 leading-tight">Controle total e Atendimento 24/7 na palma da mão</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-6 leading-tight">Controle total e Atendimento 24/7 na palma da mão</h2>
             <p className="text-gray-400 text-lg mb-8 leading-relaxed">
               Nossa stack tecnológica integra um CRM de alta performance com agentes de Inteligência Artificial para garantir que nenhum lead seja perdido e toda interação seja uma oportunidade de venda.
             </p>
@@ -207,14 +207,14 @@ export default function App() {
               whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
               viewport={{ once: true }}
-              className="absolute -bottom-10 -left-4 md:-left-10 z-20 glass-card p-4 rounded-2xl flex items-center gap-4 max-w-xs border-electric-cyan/30"
+              className="absolute -bottom-4 left-2 md:-bottom-10 md:-left-10 z-20 glass-card p-3 md:p-4 rounded-2xl flex items-center gap-3 md:gap-4 max-w-[280px] md:max-w-xs border-electric-cyan/30"
             >
-              <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-                <MessageSquare className="w-6 h-6 text-white fill-white" />
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <MessageSquare className="w-5 h-5 md:w-6 md:h-6 text-white fill-white" />
               </div>
               <div>
-                <p className="text-xs font-bold text-electric-cyan">IA Agente</p>
-                <p className="text-sm">"Olá! Vi que você se interessou. Posso agendar sua consultoria agora?"</p>
+                <p className="text-[10px] md:text-xs font-bold text-electric-cyan">IA Agente</p>
+                <p className="text-xs md:text-sm">"Olá! Vi que você se interessou. Posso agendar sua consultoria agora?"</p>
               </div>
             </motion.div>
           </motion.div>
@@ -225,14 +225,14 @@ export default function App() {
       <section id="resultados" className="py-24 bg-navy-dark overflow-hidden">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold">O que dizem nossos parceiros</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">O que dizem nossos parceiros</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { quote: "Com o trabalho de marketing da Adnove já consegui fechar alguns novos projetos.", name: "Valeria Paes", role: "Valeria Paes Arquitetura", image: "https://i.postimg.cc/T2WBdGq5/06.png" },
               { quote: "Meu posicionamento no digital era muito ruim. Agora já estou recebendo vários contatos por dia.", name: "Adriana Potye", role: "Psicóloga Clínica", border: true, image: "https://i.postimg.cc/43mBWbW7/03A.png" },
-              { quote: "O segredo do nosso sucesso foi o ajuste na VSL. A agência conseguiu criar uma copy extremamente persuasiva e agressiva e com isso aumentamos em 70% nosso faturamento.", name: "Lucas Mendes", role: "Infoprodutor Digital", image: "https://i.postimg.cc/PqSnw4P2/Lucas-Mendes.jpg" }
+              { quote: "Fizeram um site e também colocaram um agente de IA que responde meu Whatsapp o dia todo. Adorei!.", name: "Patricia Mariano", role: "Lash Designer", image: "https://i.ibb.co/0V8N9JM9/Paty-3.png" }
             ].map((testimonial, idx) => (
               <motion.div 
                 key={idx}
@@ -314,7 +314,7 @@ export default function App() {
             <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
               Não deixe seu lucro na mesa por falta de tecnologia e estratégia. Nossos especialistas estão prontos para analisar o seu negócio.
             </p>
-            <a href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="inline-block bg-electric-cyan text-navy-dark px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-lg md:text-xl hover:scale-105 transition-all glow-cyan uppercase tracking-wide">
+            <a href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="inline-block bg-electric-cyan text-navy-dark px-6 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-xl hover:scale-105 transition-all glow-cyan uppercase tracking-wide">
               Solicitar Diagnóstico Gratuito
             </a>
             <p className="mt-6 text-sm text-gray-500">Vagas limitadas para novos parceiros este mês.</p>
