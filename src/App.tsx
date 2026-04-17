@@ -14,8 +14,22 @@ export default function App() {
   };
 
   const fadeInUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }
+  };
+
+  const hoverScale = {
+    whileHover: { scale: 1.05, transition: { duration: 0.3, ease: "easeOut" } },
+    whileTap: { scale: 0.95 }
+  };
+
+  const cardHover = {
+    whileHover: { 
+      y: -8, 
+      scale: 1.02,
+      boxShadow: "0 20px 40px rgba(0, 242, 255, 0.1)",
+      transition: { duration: 0.4, ease: "easeOut" } 
+    }
   };
 
   return (
@@ -42,9 +56,14 @@ export default function App() {
             <a href="#resultados" className="hover:text-blue-600 transition-colors">Resultados</a>
           </div>
           
-          <a href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition-all duration-300">
+          <motion.a 
+            {...hoverScale}
+            href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" 
+            target="_blank" rel="noopener noreferrer" 
+            className="hidden md:inline-flex bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition-all duration-300"
+          >
             Diagnóstico Gratuito
-          </a>
+          </motion.a>
 
           {/* Mobile Menu Toggle */}
           <button className="md:hidden text-gray-800 hover:text-blue-600 transition-colors" onClick={toggleMobileMenu}>
@@ -88,27 +107,36 @@ export default function App() {
               Full Service & Tech Agency
             </motion.span>
             <motion.h1 
-              variants={fadeInUp} initial="hidden" animate="visible" transition={{ delay: 0.1, duration: 0.8 }}
+              variants={fadeInUp} initial="hidden" animate="visible" transition={{ delay: 0.15 }}
               className="text-4xl md:text-5xl font-extrabold leading-tight mb-6"
             >
               Não somos apenas uma agência. Somos a camada de <span className="text-electric-cyan">Inteligência</span> e Performance que escala o seu lucro.
             </motion.h1>
             <motion.p 
-              variants={fadeInUp} initial="hidden" animate="visible" transition={{ delay: 0.2, duration: 0.8 }}
+              variants={fadeInUp} initial="hidden" animate="visible" transition={{ delay: 0.3 }}
               className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl leading-relaxed mx-auto"
             >
               Unimos estratégia de dados, tecnologia proprietária e criatividade para transformar cliques em clientes fiéis e faturamento recorde.
             </motion.p>
             <motion.div 
-              variants={fadeInUp} initial="hidden" animate="visible" transition={{ delay: 0.3, duration: 0.8 }}
+              variants={fadeInUp} initial="hidden" animate="visible" transition={{ delay: 0.45 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <a href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-electric-cyan text-navy-dark px-6 py-4 md:px-8 rounded-lg font-bold text-base md:text-lg hover:scale-105 transition-transform glow-cyan text-center">
+              <motion.a 
+                {...hoverScale}
+                href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" 
+                target="_blank" rel="noopener noreferrer" 
+                className="inline-flex items-center justify-center bg-electric-cyan text-navy-dark px-6 py-4 md:px-8 rounded-lg font-bold text-base md:text-lg glow-cyan text-center"
+              >
                 Agendar Consultoria Estratégica
-              </a>
-              <a href="#servicos" className="inline-flex items-center justify-center border border-white/20 bg-white/5 hover:bg-white/10 px-6 py-4 md:px-8 rounded-lg font-semibold text-base md:text-lg transition-all text-center">
+              </motion.a>
+              <motion.a 
+                {...hoverScale}
+                href="#servicos" 
+                className="inline-flex items-center justify-center border border-white/20 bg-white/5 hover:bg-white/10 px-6 py-4 md:px-8 rounded-lg font-semibold text-base md:text-lg transition-all text-center"
+              >
                 Conhecer Soluções
-              </a>
+              </motion.a>
             </motion.div>
           </div>
         </div>
@@ -133,7 +161,8 @@ export default function App() {
                 key={idx}
                 initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }}
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { delay: idx * 0.1, duration: 0.6 } } }}
-                className="glass-card p-8 rounded-2xl hover:border-electric-cyan/50 hover:brightness-110 hover:-translate-y-1 transition-all group"
+                {...cardHover}
+                className="glass-card p-8 rounded-2xl hover:border-electric-cyan/50 hover:brightness-110 transition-all group cursor-default"
               >
                 <div className="w-12 h-12 mb-6 text-electric-cyan">
                   <service.icon size={32} strokeWidth={1.5} />
@@ -205,9 +234,10 @@ export default function App() {
             <motion.div 
               initial={{ opacity: 0, scale: 0.8, x: -20, y: 20 }}
               whileInView={{ opacity: 1, scale: 1, x: 0, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
+              transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="absolute -bottom-4 left-2 md:-bottom-10 md:-left-10 z-20 glass-card p-3 md:p-4 rounded-2xl flex items-center gap-3 md:gap-4 max-w-[280px] md:max-w-xs border-electric-cyan/30"
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="absolute -bottom-4 left-2 md:-bottom-10 md:-left-10 z-20 glass-card p-3 md:p-4 rounded-2xl flex items-center gap-3 md:gap-4 max-w-[280px] md:max-w-xs border-electric-cyan/30 cursor-default"
             >
               <div className="w-10 h-10 md:w-12 md:h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                 <MessageSquare className="w-5 h-5 md:w-6 md:h-6 text-white fill-white" />
@@ -238,7 +268,8 @@ export default function App() {
                 key={idx}
                 initial="hidden" whileInView="visible" viewport={{ once: true }}
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { delay: idx * 0.2, duration: 0.6 } } }}
-                className={`glass-card p-8 rounded-2xl relative ${testimonial.border ? 'border-electric-cyan/30' : ''}`}
+                {...cardHover}
+                className={`glass-card p-8 rounded-2xl relative cursor-default ${testimonial.border ? 'border-electric-cyan/30' : ''}`}
               >
                 <div className="text-electric-cyan mb-4">
                   <Quote size={32} className="fill-current" />
@@ -268,7 +299,8 @@ export default function App() {
             {/* Sócio 1 */}
             <motion.div 
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
-              className="flex flex-col items-center"
+              whileHover={{ y: -5 }}
+              className="flex flex-col items-center group"
             >
               <div className="w-48 h-48 mb-8 rounded-full bg-gray-200 overflow-hidden shadow-md flex-shrink-0">
                 {/* Profile Image */}
@@ -285,7 +317,8 @@ export default function App() {
             {/* Sócio 2 */}
             <motion.div 
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
-              className="flex flex-col items-center"
+              whileHover={{ y: -5 }}
+              className="flex flex-col items-center group"
             >
               <div className="w-48 h-48 mb-8 rounded-full bg-gray-200 overflow-hidden shadow-md flex-shrink-0">
                 {/* Profile Image */}
@@ -314,9 +347,14 @@ export default function App() {
             <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
               Não deixe seu lucro na mesa por falta de tecnologia e estratégia. Nossos especialistas estão prontos para analisar o seu negócio.
             </p>
-            <a href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="inline-block bg-electric-cyan text-navy-dark px-6 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-xl hover:scale-105 transition-all glow-cyan uppercase tracking-wide">
+            <motion.a 
+              {...hoverScale}
+              href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" 
+              target="_blank" rel="noopener noreferrer" 
+              className="inline-block bg-electric-cyan text-navy-dark px-6 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-xl transition-all glow-cyan uppercase tracking-wide"
+            >
               Solicitar Diagnóstico Gratuito
-            </a>
+            </motion.a>
             <p className="mt-6 text-sm text-gray-500">Vagas limitadas para novos parceiros este mês.</p>
           </motion.div>
         </div>
