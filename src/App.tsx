@@ -108,15 +108,15 @@ export default function App() {
             </motion.span>
             <motion.h1 
               variants={fadeInUp} initial="hidden" animate="visible" transition={{ delay: 0.15 }}
-              className="text-4xl md:text-5xl font-extrabold leading-tight mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6"
             >
-              Não somos apenas uma agência. Somos a camada de <span className="text-electric-cyan">Inteligência</span> e Performance que escala o seu lucro.
+              Seu WhatsApp é um <span className="text-electric-cyan">balde furado</span>: Pare de queimar dinheiro com anúncios que morrem no silêncio do atendimento.
             </motion.h1>
             <motion.p 
               variants={fadeInUp} initial="hidden" animate="visible" transition={{ delay: 0.3 }}
-              className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl leading-relaxed mx-auto"
+              className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl leading-relaxed mx-auto"
             >
-              Unimos estratégia de dados, tecnologia proprietária e criatividade para transformar cliques em clientes fiéis e faturamento recorde.
+              Instalamos o Sistema de Vendas Slim: Landing Pages de alta conversão integradas a Agentes de IA que qualificam, respondem e fazem vendas no seu WhatsApp 24/7. Sem aumentar sua equipe.
             </motion.p>
             <motion.div 
               variants={fadeInUp} initial="hidden" animate="visible" transition={{ delay: 0.45 }}
@@ -124,11 +124,11 @@ export default function App() {
             >
               <motion.a 
                 {...hoverScale}
-                href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" 
+                href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+uma+auditoria+gratuita+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" 
                 target="_blank" rel="noopener noreferrer" 
                 className="inline-flex items-center justify-center bg-electric-cyan text-navy-dark px-6 py-4 md:px-8 rounded-lg font-bold text-base md:text-lg glow-cyan text-center"
               >
-                Agendar Consultoria Estratégica
+                Quero uma Auditoria Gratuita
               </motion.a>
               <motion.a 
                 {...hoverScale}
@@ -142,6 +142,20 @@ export default function App() {
         </div>
       </section>
 
+      <section id="problema" className="py-24 bg-white text-navy-dark">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-8 text-red-600">O cemitério de leads da sua empresa.</h2>
+            <p className="text-xl md:text-2xl leading-relaxed mb-8">
+              Você gasta em anúncios, o lead chega no WhatsApp, mas sua equipe demora 30 minutos para responder. Nesse tempo, ele já comprou do concorrente.
+            </p>
+            <p className="text-lg md:text-xl font-bold bg-navy-dark text-white inline-block px-6 py-3 rounded-lg">
+              Você não precisa de "mais tráfego", você precisa parar de queimar o que já chega.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Services Grid */}
       <section id="servicos" className="py-24 bg-navy-dark tech-pattern">
         <div className="container mx-auto px-6 max-w-7xl">
@@ -152,8 +166,8 @@ export default function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: PenTool, title: "Conteúdo", desc: "Estratégia criativa focada em retenção e autoridade, transformando sua marca em uma referência no nicho." },
-              { icon: TrendingUp, title: "Performance", desc: "Gestão de tráfego pago baseada em dados reais, otimizando seu ROI com as melhores ferramentas do mercado." },
+              { icon: PenTool, title: "Engenharia de Conversão", desc: "Estratégia criativa focada em retenção e autoridade, transformando sua marca em uma referência no nicho." },
+              { icon: TrendingUp, title: "Arbitragem de Atenção", desc: "Gestão de tráfego pago baseada em dados reais, otimizando seu ROI com as melhores ferramentas do mercado." },
               { icon: Users, title: "CRM Próprio", desc: "Gestão de relacionamento customizada para o seu pipeline de vendas, centralizando dados em um só lugar." },
               { icon: MessageSquare, title: "Agentes IA", desc: "Atendimento via WhatsApp automatizado por IA que qualifica leads e fecha vendas 24 horas por dia." }
             ].map((service, idx) => (
@@ -183,7 +197,7 @@ export default function App() {
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
             className="lg:w-1/2"
           >
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-6 leading-tight">Controle total e Atendimento 24/7 na palma da mão</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-6 leading-tight">Conheça o Agente de Elite IA.</h2>
             <p className="text-gray-400 text-lg mb-8 leading-relaxed">
               Nossa stack tecnológica integra um CRM de alta performance com agentes de Inteligência Artificial para garantir que nenhum lead seja perdido e toda interação seja uma oportunidade de venda.
             </p>
@@ -192,13 +206,19 @@ export default function App() {
                 <div className="w-5 h-5 bg-electric-cyan rounded-full flex items-center justify-center shrink-0">
                   <Check size={12} className="text-navy-dark stroke-[3]" />
                 </div>
-                <span>Dashboard em tempo real para tomada de decisão</span>
+                <span className="font-bold">Resposta em 10 segundos: <span className="font-normal text-gray-400">Nunca mais deixe um lead esfriar.</span></span>
               </li>
               <li className="flex items-center gap-3">
                 <div className="w-5 h-5 bg-electric-cyan rounded-full flex items-center justify-center shrink-0">
                   <Check size={12} className="text-navy-dark stroke-[3]" />
                 </div>
-                <span>Automação inteligente de fluxos de venda</span>
+                <span className="font-bold">Qualificação Automática: <span className="font-normal text-gray-400">O robô separa os curiosos dos compradores reais antes de passar para o seu time.</span></span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="w-5 h-5 bg-electric-cyan rounded-full flex items-center justify-center shrink-0">
+                  <Check size={12} className="text-navy-dark stroke-[3]" />
+                </div>
+                <span className="font-bold">Escala Infinita: <span className="font-normal text-gray-400">Atenda 10 ou 1.000 pessoas simultaneamente com o mesmo custo fixo.</span></span>
               </li>
             </ul>
           </motion.div>
@@ -345,15 +365,15 @@ export default function App() {
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-electric-cyan opacity-10 rounded-full blur-3xl"></div>
             <h2 className="text-3xl md:text-4xl font-extrabold mb-6">Pronto para o próximo nível de escala?</h2>
             <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
-              Não deixe seu lucro na mesa por falta de tecnologia e estratégia. Nossos especialistas estão prontos para analisar o seu negócio.
+              Não somos uma agência de "postzinhos". Somos uma unidade de inteligência focada em lucro líquido.
             </p>
             <motion.a 
               {...hoverScale}
-              href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" 
+              href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+agendar+um+diagn%C3%B3stico+de+escala&type=phone_number&app_absent=0" 
               target="_blank" rel="noopener noreferrer" 
               className="inline-block bg-electric-cyan text-navy-dark px-6 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-xl transition-all glow-cyan uppercase tracking-wide"
             >
-              Solicitar Diagnóstico Gratuito
+              Agendar Diagnóstico de Escala
             </motion.a>
             <p className="mt-6 text-sm text-gray-500">Vagas limitadas para novos parceiros este mês.</p>
           </motion.div>
