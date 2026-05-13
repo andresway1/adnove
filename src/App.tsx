@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X, PenTool, TrendingUp, Users, MessageSquare, Check, Quote } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -41,9 +41,9 @@ export default function App() {
             {/* Logo */}
             <a href="#" className="flex items-center transition-transform hover:scale-105">
               <img 
-                src="https://i.postimg.cc/m2MK5k8F/Logo-para-site.png" 
+                src="https://i.postimg.cc/zfLhpHq7/Nova-Logo.png" 
                 alt="AdNove Consultoria de Marketing Digital" 
-                className="h-10 md:h-[58px] w-auto"
+                className="h-[60px] md:h-[87px] w-auto"
                 referrerPolicy="no-referrer"
               />
             </a>
@@ -83,7 +83,7 @@ export default function App() {
               <a href="#servicos" onClick={closeMobileMenu} className="hover:text-blue-600 transition-colors py-2">Serviços</a>
               <a href="#tecnologia" onClick={closeMobileMenu} className="hover:text-blue-600 transition-colors py-2">Tecnologia</a>
               <a href="#resultados" onClick={closeMobileMenu} className="hover:text-blue-600 transition-colors py-2">Resultados</a>
-              <a href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu} className="bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition-all duration-300 text-center mt-2">
+              <a href="https://api.whatsapp.com/send/?phone=5519982980516&text=Ol%C3%A1%21+Quero+fazer+um+diagn%C3%B3stico+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu} className="bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition-all duration-300 text-center mt-2">
                 Diagnóstico Gratuito
               </a>
             </div>
@@ -124,7 +124,7 @@ export default function App() {
             >
               <motion.a 
                 {...hoverScale}
-                href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+fazer+uma+auditoria+gratuita+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" 
+                href="https://api.whatsapp.com/send/?phone=5519982980516&text=Ol%C3%A1%21+Quero+fazer+uma+auditoria+gratuita+do+meu+neg%C3%B3cio&type=phone_number&app_absent=0" 
                 target="_blank" rel="noopener noreferrer" 
                 className="inline-flex items-center justify-center bg-electric-cyan text-navy-dark px-6 py-4 md:px-8 rounded-lg font-bold text-base md:text-lg glow-cyan text-center"
               >
@@ -369,7 +369,7 @@ export default function App() {
             </p>
             <motion.a 
               {...hoverScale}
-              href="https://api.whatsapp.com/send/?phone=551931405902&text=Ol%C3%A1%21+Quero+agendar+um+diagn%C3%B3stico+de+escala&type=phone_number&app_absent=0" 
+              href="https://api.whatsapp.com/send/?phone=5519982980516&text=Ol%C3%A1%21+Quero+agendar+um+diagn%C3%B3stico+de+escala&type=phone_number&app_absent=0" 
               target="_blank" rel="noopener noreferrer" 
               className="inline-block bg-electric-cyan text-navy-dark px-6 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-xl transition-all glow-cyan uppercase tracking-wide"
             >
@@ -390,9 +390,38 @@ export default function App() {
           <p className="text-sm text-center md:text-left">© 2026 AdNove Consultoria em Marketing. Todos os direitos reservados.</p>
         </div>
       </footer>
+
+      {/* Cookie Consent Banner */}
+      {(() => {
+        const [show, setShow] = useState(false);
+        useEffect(() => {
+          const consent = localStorage.getItem('cookieConsent');
+          if (!consent) setShow(true);
+        }, []);
+        
+        if (!show) return null;
+        
+        return (
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:w-[500px] z-[10000] p-4 bg-white/90 backdrop-blur-md rounded-xl shadow-2xl border border-gray-200"
+            role="alert"
+          >
+            <p className="text-sm text-gray-800 mb-4">
+              Utilizamos cookies para melhorar sua experiência de navegação e analisar o tráfego do site. Ao continuar navegando, você concorda com nossa Política de Privacidade.
+            </p>
+            <div className="flex flex-col md:flex-row gap-2">
+              <button onClick={() => { localStorage.setItem('cookieConsent', 'accepted'); setShow(false); }} className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition" aria-label="Aceitar cookies">Aceitar</button>
+              <button onClick={() => { localStorage.setItem('cookieConsent', 'declined'); setShow(false); }} className="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gray-300 transition" aria-label="Recusar cookies">Recusar</button>
+              <a href="/politica-de-privacidade" className="text-blue-600 text-sm font-medium underline flex items-center justify-center" aria-label="Ver política de privacidade">Política de Privacidade</a>
+            </div>
+          </motion.div>
+        );
+      })()}
       {/* Floating WhatsApp Button */}
       <motion.a 
-        href="https://wa.me/554784641781?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20de%20marketing%20para%20minha%20empresa"
+        href="https://wa.me/5519982980516?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20de%20marketing%20para%20minha%20empresa"
         target="_blank"
         rel="noopener noreferrer"
         initial={{ opacity: 0, scale: 0.5 }}
